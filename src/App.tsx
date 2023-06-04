@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Test from './/image/mockup.png'
+import Button from "./components/button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="calculator__container flex justify-center items-center h-full w-full">
+        <div className="relative rounded rounded-xxl">
+            <img src={Test} alt="lorem" />
+        </div>
+        <div className="grid-cols-4 grid-rows-5 grid absolute text-white">
+            <Button number={1} />
+        </div>
     </div>
   );
 }
