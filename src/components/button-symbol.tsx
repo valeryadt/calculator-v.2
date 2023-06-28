@@ -1,10 +1,12 @@
 import IcBaselinePlusMinusAlt from "../icones/IcBaselinePlusMinusAlt";
+import React, {JSX} from "react";
 
 export type ButtonSymbolProps = {
-    symbol: string
+    symbol: string,
+    buttonHandler: (event: React.MouseEvent<HTMLDivElement>) => void
 }
-export default function ButtonSymbol ({symbol} : ButtonSymbolProps) {
-    function checkValue(value: string) {
+export default function ButtonSymbol ({symbol, buttonHandler} : ButtonSymbolProps) {
+    function checkValue(value: string): string | JSX.Element {
         let symbol;
         switch(value) {
             case 'AC':
@@ -20,12 +22,12 @@ export default function ButtonSymbol ({symbol} : ButtonSymbolProps) {
                 symbol = '%'
                 break;
             default:
-                console.log('some error')
+                throw new Error('error')
         }
         return symbol;
     }
     return (
-        <div className="bg-symbol button text-metal">
+        <div className="bg-symbol transition hover:bg-symbol-press ease-in-out button text-metal" onClick={buttonHandler}>
             {checkValue(symbol)}
         </div>
     )

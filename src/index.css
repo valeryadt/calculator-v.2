@@ -22,8 +22,10 @@ body {
 .gradient {
   height: 100%;
   width: 100%;
-  background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgb(164, 49, 142) 72%, rgba(115,53,134,1) 100%);
+  background: linear-gradient(149deg, #e7ccb7 0%, rgb(80, 145, 229) 42%, rgb(204, 112, 180) 72%, rgb(143, 86, 157) 100%);
+  /*background: linear-gradient(149deg, rgba(24,187,156,1) 0%, rgba(106,57,175,1) 42%, rgb(164, 49, 142) 72%, rgba(115,53,134,1) 100%);*/
   animation: gradient 10s infinite linear;
+  background-blend-mode: normal, lighten, soft-light;
   background-size: 400%;
 }
 

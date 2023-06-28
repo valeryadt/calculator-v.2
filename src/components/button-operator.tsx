@@ -33,7 +33,7 @@ export default function ButtonOperator ({symbol} : ButtonOperatorProps) {
    }
 
     return (
-        <div className="bg-operation button text-white">
+        <div className="bg-operation transition ease-in-out button text-white hover:bg-white hover:text-operation">
             {checkValue(symbol)}
         </div>
     )
